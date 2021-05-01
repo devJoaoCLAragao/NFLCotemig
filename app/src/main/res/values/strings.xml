@@ -10,4 +10,15 @@
     <string name="create_account">Criar Conta</string>
     <string name="Ajuda">Tem problema nao! Basta colocar seu e-mail aqui em baixo que a gente te ajuda!</string>
     <string name="recuperar_senha">Recuperar Senha</string>
+    <string name="usuario_criado_com_sucesso">Usuário Criado com sucesso</string>
+    <string name="login_now">Pode fazer login já</string>
+    <string name="ok">Ok</string>
+    <string name="ops">Ops</string>
+    <string name="user_reset_message">Usuário já existe! Deseja redefinir sua senha?</string>
+    <string name="yes">Sim</string>
+    <string name="no">Não</string>
+    <string name="internet_required">Erro de conexão. Verifique sua internet</string>
+    <string name="user_not_found">Usuário não encontrado. Deseja criar uma nova conta?</string>
+    <string name="tabela_campeonato">Tabela Campeonato</string>
+    <string name="lista_de_times">Lista de Times</string>
 </resources>
