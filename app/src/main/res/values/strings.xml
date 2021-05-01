@@ -5,4 +5,9 @@
     <string name="password">Senha</string>
     <string name="enter">Entrar</string>
     <string name="forgot_password">Esqueceu a Senha?</string>
+    <string name="crie_sua_conta">Crie sua Conta</string>
+    <string name="name">Nome</string>
+    <string name="create_account">Criar Conta</string>
+    <string name="Ajuda">Tem problema nao! Basta colocar seu e-mail aqui em baixo que a gente te ajuda!</string>
+    <string name="recuperar_senha">Recuperar Senha</string>
 </resources>
