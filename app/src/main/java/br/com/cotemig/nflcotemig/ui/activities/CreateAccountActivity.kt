@@ -59,6 +59,9 @@ class CreateAccountActivity : AppCompatActivity() {
                        title(R.string.usuario_criado_com_sucesso)
                        message(R.string.login_now)
                        positiveButton(R.string.ok)
+                       create_name.setText("")
+                       create_email.setText("")
+                       create_password.setText("")
                    }
                 } else if (response.code() == 409){
                     MaterialDialog(this@CreateAccountActivity).show {

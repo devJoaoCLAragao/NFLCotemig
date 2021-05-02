@@ -8,11 +8,11 @@
     <string name="crie_sua_conta">Crie sua Conta</string>
     <string name="name">Nome</string>
     <string name="create_account">Criar Conta</string>
-    <string name="Ajuda">Tem problema nao! Basta colocar seu e-mail aqui em baixo que a gente te ajuda!</string>
+    <string name="Ajuda">Não tem problema! Basta colocar seu e-mail aqui, que a gente te ajuda!</string>
     <string name="recuperar_senha">Recuperar Senha</string>
     <string name="usuario_criado_com_sucesso">Usuário Criado com sucesso</string>
     <string name="login_now">Pode fazer login já</string>
-    <string name="ok">Ok</string>
+    <string name="ok">OK</string>
     <string name="ops">Ops</string>
     <string name="user_reset_message">Usuário já existe! Deseja redefinir sua senha?</string>
     <string name="yes">Sim</string>
