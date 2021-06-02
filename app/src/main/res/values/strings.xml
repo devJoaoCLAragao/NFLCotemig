@@ -21,4 +21,6 @@
     <string name="user_not_found">Usuário não encontrado. Deseja criar uma nova conta?</string>
     <string name="tabela_campeonato">Tabela Campeonato</string>
     <string name="lista_de_times">Lista de Times</string>
+    <string name="title_activity_standings">StandingsActivity</string>
+
 </resources>

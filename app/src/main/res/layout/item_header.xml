@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:id="@+id/conference"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:textSize="20sp"
+        android:text="CONFERENCIA" />
+
+    <RelativeLayout
+        android:id="@+id/fixo"
+        android:layout_below="@+id/conference"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="5dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:text="Equipe" />
+
+        <LinearLayout
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:gravity="center_horizontal"
+                android:text="Rank"/>
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:gravity="center_horizontal"
+                android:text="VIT"/>
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:gravity="center_horizontal"
+                android:text="DER"/>
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:gravity="center_horizontal"
+                android:text="E"/>
+            <TextView
+                android:layout_width="45dp"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:gravity="center_horizontal"
+                android:text="%"/>
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:gravity="center_horizontal"
+                android:text="PF"/>
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:gravity="center_horizontal"
+                android:text="PC"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_below="@+id/fixo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/teamName"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:text="Nome do Time" />
+
+        <LinearLayout
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/divisionRank"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:gravity="center_horizontal"
+                android:text="1"/>
+            <TextView
+                android:id="@+id/wins"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:gravity="center_horizontal"
+                android:text="13"/>
+            <TextView
+                android:id="@+id/losses"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:gravity="center_horizontal"
+                android:text="3"/>
+            <TextView
+                android:id="@+id/ties"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:gravity="center_horizontal"
+                android:text="0"/>
+            <TextView
+                android:id="@+id/percentage"
+                android:layout_width="45dp"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:gravity="center_horizontal"
+                android:text="0.813"/>
+            <TextView
+                android:id="@+id/pointsFor"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:gravity="center_horizontal"
+                android:text="501"/>
+            <TextView
+                android:id="@+id/pointsAgainst"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:gravity="center_horizontal"
+                android:text="375"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
