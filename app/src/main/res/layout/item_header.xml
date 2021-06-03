@@ -1,149 +1,181 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="@color/blue_NFL">
 
     <TextView
-        android:layout_marginTop="5dp"
         android:id="@+id/conference"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
         android:layout_marginLeft="10dp"
-        android:textSize="20sp"
-        android:text="CONFERENCIA" />
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:text="CONFERENCIA"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
 
     <RelativeLayout
         android:id="@+id/fixo"
-        android:layout_below="@+id/conference"
         android:layout_width="match_parent"
-        android:layout_marginBottom="5dp"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/conference"
+        android:layout_marginBottom="5dp">
+
         <TextView
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:textSize="12sp"
-            android:text="Equipe" />
+            android:text="Equipe"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
 
         <LinearLayout
-            android:layout_alignParentRight="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
             android:orientation="horizontal">
 
             <TextView
                 android:layout_width="30dp"
                 android:layout_height="wrap_content"
-                android:textSize="12sp"
                 android:gravity="center_horizontal"
-                android:text="Rank"/>
+                android:text="Rank"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
             <TextView
                 android:layout_width="30dp"
                 android:layout_height="wrap_content"
-                android:textSize="12sp"
                 android:gravity="center_horizontal"
-                android:text="VIT"/>
+                android:text="VIT"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
             <TextView
                 android:layout_width="30dp"
                 android:layout_height="wrap_content"
-                android:textSize="12sp"
                 android:gravity="center_horizontal"
-                android:text="DER"/>
+                android:text="DER"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
             <TextView
                 android:layout_width="30dp"
                 android:layout_height="wrap_content"
-                android:textSize="12sp"
                 android:gravity="center_horizontal"
-                android:text="E"/>
+                android:text="E"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
             <TextView
                 android:layout_width="45dp"
                 android:layout_height="wrap_content"
-                android:textSize="12sp"
                 android:gravity="center_horizontal"
-                android:text="%"/>
+                android:text="%"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
             <TextView
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
-                android:textSize="12sp"
                 android:gravity="center_horizontal"
-                android:text="PF"/>
+                android:text="PF"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
             <TextView
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
-                android:textSize="12sp"
                 android:gravity="center_horizontal"
-                android:text="PC"/>
+                android:text="PC"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
 
         </LinearLayout>
     </RelativeLayout>
 
     <RelativeLayout
-        android:layout_below="@+id/fixo"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fixo">
 
         <TextView
             android:id="@+id/teamName"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:textSize="12sp"
-            android:text="Nome do Time" />
+            android:text="Nome do Time"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
 
         <LinearLayout
-            android:layout_alignParentRight="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal"
+            android:textColor="@color/white">
 
             <TextView
                 android:id="@+id/divisionRank"
                 android:layout_width="30dp"
                 android:layout_height="wrap_content"
-                android:textSize="12sp"
                 android:gravity="center_horizontal"
-                android:text="1"/>
+                android:text="1"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
             <TextView
                 android:id="@+id/wins"
                 android:layout_width="30dp"
                 android:layout_height="wrap_content"
-                android:textSize="12sp"
                 android:gravity="center_horizontal"
-                android:text="13"/>
+                android:text="13"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
             <TextView
                 android:id="@+id/losses"
                 android:layout_width="30dp"
                 android:layout_height="wrap_content"
-                android:textSize="12sp"
                 android:gravity="center_horizontal"
-                android:text="3"/>
+                android:text="3"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
             <TextView
                 android:id="@+id/ties"
                 android:layout_width="30dp"
                 android:layout_height="wrap_content"
-                android:textSize="12sp"
                 android:gravity="center_horizontal"
-                android:text="0"/>
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
             <TextView
                 android:id="@+id/percentage"
                 android:layout_width="45dp"
                 android:layout_height="wrap_content"
-                android:textSize="12sp"
                 android:gravity="center_horizontal"
-                android:text="0.813"/>
+                android:text="0.813"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
             <TextView
                 android:id="@+id/pointsFor"
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
-                android:textSize="12sp"
                 android:gravity="center_horizontal"
-                android:text="501"/>
+                android:text="501"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
             <TextView
                 android:id="@+id/pointsAgainst"
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
-                android:textSize="12sp"
                 android:gravity="center_horizontal"
-                android:text="375"/>
+                android:text="375"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
 
         </LinearLayout>
 

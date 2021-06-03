@@ -41,8 +41,6 @@ class CreateAccountActivity : AppCompatActivity() {
         finish()
     }
 
-
-
     fun createAccount(){
         var account = Account()
         account.name = create_name.text.toString()

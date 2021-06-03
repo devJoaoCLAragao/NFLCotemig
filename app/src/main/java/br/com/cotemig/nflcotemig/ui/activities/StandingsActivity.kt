@@ -1,5 +1,6 @@
 package br.com.cotemig.nflcotemig.ui.activities
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -18,6 +19,10 @@ class StandingsActivity : AppCompatActivity() {
         setContentView(R.layout.activity_standings)
 
         getStanding()
+
+        backMainMenu.setOnClickListener {
+            backMenu()
+        }
 
     }
 
@@ -43,10 +48,16 @@ class StandingsActivity : AppCompatActivity() {
             }
 
             override fun onFailure(call: Call<List<Standings>>, t: Throwable) {
-                Toast.makeText(this@StandingsActivity, "erro", Toast.LENGTH_LONG).show()
+                Toast.makeText(this@StandingsActivity, "erroStandings", Toast.LENGTH_LONG).show()
             }
         })
 
+    }
+
+    fun backMenu(){
+        var intent = Intent(this, MainMenuActivity::class.java)
+        startActivity(intent)
+        finish()
     }
 
 }

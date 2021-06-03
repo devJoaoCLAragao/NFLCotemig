@@ -11,8 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NFLCotemig">
-        <activity android:name=".ui.activities.MainMenuActivity" />
-        <activity android:name=".ui.activities.StandingsActivity" />
+        <activity android:name=".ui.activities.MainMenuActivity"/>
+        <activity android:name=".ui.activities.StandingsActivity"/>
         <activity android:name=".ui.activities.CreateAccountActivity" />
         <activity android:name=".ui.activities.ForgotPasswordActivity" />
         <activity android:name=".ui.activities.LoginActivity" />
