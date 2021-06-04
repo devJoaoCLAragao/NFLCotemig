@@ -22,5 +22,6 @@
     <string name="tabela_campeonato">Tabela Campeonato</string>
     <string name="lista_de_times">Lista de Times</string>
     <string name="title_activity_standings">StandingsActivity</string>
+    <string name="highlights_do_jogo">Highlights do Jogo</string>
 
 </resources>

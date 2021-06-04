@@ -4,16 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/blue_NFL"
     android:orientation="vertical"
-    tools:context=".ui.activities.StandingsActivity">
+    android:background="@color/blue_NFL"
+    tools:context=".ui.activities.LastGamesActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <ImageButton
-            android:id="@+id/backMainMenu"
+            android:id="@+id/backMainMenu2"
             android:layout_width="40dp"
             android:layout_height="30dp"
             android:layout_margin="20dp"
@@ -32,12 +32,11 @@
 
     </RelativeLayout>
 
-
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/table"
+        android:id="@+id/gamesList"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="10dp"
-        tools:listitem="@layout/item_header"/>
+        tools:listitem="@layout/item_lastgames"/>
 
 </LinearLayout>
