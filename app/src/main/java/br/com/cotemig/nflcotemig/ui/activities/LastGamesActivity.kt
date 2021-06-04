@@ -26,6 +26,10 @@ class LastGamesActivity : AppCompatActivity() {
             backMenu()
         }
 
+        youtubetest.setOnClickListener {
+            openYoutube("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+        }
+
     }
 
     fun getLastGames() {
@@ -68,12 +72,12 @@ class LastGamesActivity : AppCompatActivity() {
         finish()
     }
 
-//    fun openYoutube(url: String){
-//        var intent = Intent(Intent.ACTION_VIEW)
-//
-//        intent.setPackage("com.google.android.youtube")
-//        intent.data = Uri.parse(url)
-//
-//        startActivity(intent)
-//    }
+    fun openYoutube(url: String){
+        var intent = Intent(Intent.ACTION_VIEW)
+
+        intent.setPackage("com.google.android.youtube")
+        intent.data = Uri.parse(url)
+
+        startActivity(intent)
+    }
 }
