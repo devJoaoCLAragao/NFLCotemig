@@ -20,6 +20,11 @@ class RetrofitInitializer {
         .addConverterFactory(GsonConverterFactory.create())
         .build()
 
+    private val retrofitTeams = Retrofit.Builder()
+        .baseUrl("https://www.thesportsdb.com/api/v1/json/1/")
+        .addConverterFactory(GsonConverterFactory.create())
+        .build()
+
     fun accountService() : AccountService{
         return retrofit.create(AccountService::class.java)
     }
@@ -30,6 +35,14 @@ class RetrofitInitializer {
 
     fun serviceLastGames(): LastGameService {
         return retrofitLastGames.create(LastGameService::class.java)
+    }
+
+    fun serviceListaTeam(): TeamService {
+        return retrofitTeams.create(TeamService::class.java)
+    }
+
+    fun serviceListaDescTeam(): DescTeamService {
+        return retrofitTeams.create(DescTeamService::class.java)
     }
 
 }
