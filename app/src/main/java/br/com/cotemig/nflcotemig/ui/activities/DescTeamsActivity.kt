@@ -1,5 +1,7 @@
 package br.com.cotemig.nflcotemig.ui.activities
 
+import android.content.ActivityNotFoundException
+import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
@@ -24,7 +26,7 @@ class DescTeamsActivity : AppCompatActivity() {
         showDescTeams(team)
 
         strYoutube.setOnClickListener {
-            openYoutube(team.strYoutube)
+            openYoutubeLink(team.strYoutube)
         }
 
         buttonPlayer.setOnClickListener {
@@ -43,11 +45,15 @@ class DescTeamsActivity : AppCompatActivity() {
         intStadiumCapacity.text = details.intStadiumCapacity
     }
 
-    fun openYoutube(url: String) {
-        var intent = Intent(Intent.ACTION_VIEW)
-        intent.setPackage("com.google.android.youtube")
-        intent.data = Uri.parse(url)
-        startActivity(intent)
+    fun openYoutubeLink(youtubeID: String) {
+        val intentApp = Intent(Intent.ACTION_VIEW, Uri.parse("vnd.youtube:" + youtubeID))
+        val intentBrowser =
+            Intent(Intent.ACTION_VIEW, Uri.parse("http://www.youtube.com/watch?v=" + youtubeID))
+        try {
+            startActivity(intentApp)
+        } catch (ex: ActivityNotFoundException) {
+            startActivity(intentBrowser)
+        }
     }
 
 
