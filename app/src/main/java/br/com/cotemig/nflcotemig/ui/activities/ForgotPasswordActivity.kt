@@ -11,8 +11,10 @@ class ForgotPasswordActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_forgot_password)
 
-        //TODO("Tem que fazer isso funcionar")
+        //TODO
+        // "Tem que fazer isso funcionar"
         // Só ta "funcionando" o que vem da CreateAccountActivity
+        // testei pelo Postman e a API não retorna nada..
 
         // esse e-mail vem da Create Account, se conta já existe...
         var email = Intent().getStringExtra("email")

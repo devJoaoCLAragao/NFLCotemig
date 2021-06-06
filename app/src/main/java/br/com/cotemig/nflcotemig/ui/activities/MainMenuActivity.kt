@@ -23,6 +23,7 @@ class MainMenuActivity : AppCompatActivity() {
         tableTeam.setOnClickListener {
             showTeams()
         }
+
     }
 
     fun showStandings(){
@@ -38,6 +39,7 @@ class MainMenuActivity : AppCompatActivity() {
     fun showTeams(){
         var intent = Intent(this, TeamsActivity::class.java)
         startActivity(intent)
+
     }
 
 }

@@ -54,10 +54,12 @@ class LoginActivity : AppCompatActivity() {
                     }
                 }
             }
-
-
             override fun onFailure(call: Call<Account>, t: Throwable) {
-                TODO("Not yet implemented")
+                MaterialDialog(this@LoginActivity).show {
+                    title(R.string.ops)
+                    message(R.string.internet_required)
+                    positiveButton(R.string.ok)
+                }
             }
         })
     }

@@ -4,6 +4,7 @@ import android.content.Intent
 import android.content.res.Resources
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import br.com.cotemig.nflcotemig.R
 import br.com.cotemig.nflcotemig.model.Account
 import br.com.cotemig.nflcotemig.service.RetrofitInitializer
@@ -40,8 +41,6 @@ class CreateAccountActivity : AppCompatActivity() {
         finish()
     }
 
-
-
     fun createAccount(){
         var account = Account()
         account.name = create_name.text.toString()
@@ -58,10 +57,10 @@ class CreateAccountActivity : AppCompatActivity() {
                    MaterialDialog(this@CreateAccountActivity).show {
                        title(R.string.usuario_criado_com_sucesso)
                        message(R.string.login_now)
-                       positiveButton(R.string.ok)
-                       create_name.setText("")
-                       create_email.setText("")
-                       create_password.setText("")
+                       positiveButton(R.string.ok){dialog ->
+                           showLogin()
+                       }
+
                    }
                 } else if (response.code() == 409){
                     MaterialDialog(this@CreateAccountActivity).show {
