@@ -33,7 +33,7 @@ class DescTeamsActivity : AppCompatActivity() {
         }
 
         strFacebook.setOnClickListener {
-            newFacebookIntent("www.facebook.com/arizonacardinals")
+            startActivity(getOpenFacebookIntent(team.strFacebook))
         }
     }
 
@@ -59,17 +59,13 @@ class DescTeamsActivity : AppCompatActivity() {
         }
     }
 
-    fun newFacebookIntent(url: String) {
-        var uri = Uri.parse(url)
-        try {
-            val applicationInfo = packageManager.getApplicationInfo("com.facebook.katana", 0)
-            if (applicationInfo.enabled) {
-                uri = Uri.parse("fb://facewebmodal/f?href=$url")
-            }
-        } catch (ignored: PackageManager.NameNotFoundException) {
+    private fun getOpenFacebookIntent(url: String): Intent? {
+        return try {
+            packageManager.getPackageInfo("com.facebook.katana", 0)
+            Intent(Intent.ACTION_VIEW, Uri.parse("http://$url"))
+        } catch (e: Exception) {
+            Intent(Intent.ACTION_VIEW, Uri.parse("http://$url"))
         }
-        var intent = Intent(Intent.ACTION_VIEW, uri)
-        startActivity(intent)
     }
 
 
