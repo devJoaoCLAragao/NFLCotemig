@@ -10,7 +10,6 @@ interface DescTeamService {
 
     @GET("lookupteam.php?id={user}")
 //    fun getDescTeam(@Path("user")user: String) : Call<ListaTeams>
-
     fun getDescTeam(@Query("user")user: String) : Call<ListaTeams>
 
 }
