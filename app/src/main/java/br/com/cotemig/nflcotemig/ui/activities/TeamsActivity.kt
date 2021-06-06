@@ -1,5 +1,6 @@
 package br.com.cotemig.nflcotemig.ui.activities
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -19,6 +20,10 @@ class TeamsActivity : AppCompatActivity() {
         setContentView(R.layout.activity_teams)
 
         getTeam()
+
+        backMainMenu3.setOnClickListener {
+            showMenu()
+        }
 
     }
 
@@ -52,5 +57,11 @@ class TeamsActivity : AppCompatActivity() {
 
         teamsdesc.adapter = TeamsAdapter(this, teams)
         teamsdesc.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+    }
+
+    fun showMenu(){
+        var intent = Intent(this, MainMenuActivity::class.java)
+        startActivity(intent)
+        finish()
     }
 }

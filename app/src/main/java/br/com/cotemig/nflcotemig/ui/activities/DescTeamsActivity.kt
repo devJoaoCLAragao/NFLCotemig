@@ -19,47 +19,23 @@ class DescTeamsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_descteams)
 
-        getDescTeam()
+        var team = intent.getSerializableExtra("team") as Teams
 
+        showDescTeams(team)
+
+        strYoutube.setOnClickListener {
+            openYoutube(team.strYoutube)
+        }
+
+        backTeamList.setOnClickListener {
+            showTeamList()
+        }
     }
 
-    fun getDescTeam(){
 
-        var details = intent.getSerializableExtra("team") as Teams
-
-        var s = RetrofitInitializer().serviceListaDescTeam()
-
-        var call = s.getDescTeam(details.idTeam)
-
-        call.enqueue(object : retrofit2.Callback<ListaTeams>{
-            override fun onResponse(call: Call<ListaTeams>, response: Response<ListaTeams>) {
-
-                response?.let {
-                    if (response.code() == 200) {
-                        response.body()?.let {
-                            showDescTeams(details)
-                            strYoutube.setOnClickListener {
-                                openYoutube(details.strYoutube)
-                            }
-//                            buttonPlayer.setOnClickListener {
-//                                openPlayers(details)
-//                            }
-                            //Toast.makeText(this@LastGamesActivity, "Show de Bola", Toast.LENGTH_LONG).show()
-                        }
-                    }
-                }
-                Toast.makeText(this@DescTeamsActivity, "Show de bola", Toast.LENGTH_LONG).show()
-            }
-
-            override fun onFailure(call: Call<ListaTeams>, t: Throwable) {
-                Toast.makeText(this@DescTeamsActivity, "Erro", Toast.LENGTH_LONG).show()
-            }
-        })
-
-    }
-
-    fun showDescTeams(details: Teams){
+    fun showDescTeams(details: Teams) {
         Glide.with(this@DescTeamsActivity).load(details.strTeamBadge).into(strTeamBadge)
+        Glide.with(this@DescTeamsActivity).load(details.strStadiumThumb).into(strStadiumThumb)
         strTeam.text = details.strTeam
         strManager.text = details.strManager
         strStadium.text = details.strStadium
@@ -67,15 +43,20 @@ class DescTeamsActivity : AppCompatActivity() {
         intStadiumCapacity.text = details.intStadiumCapacity
     }
 
-    fun openYoutube(url: String){
+    fun openYoutube(url: String) {
         var intent = Intent(Intent.ACTION_VIEW)
-
         intent.setPackage("com.google.android.youtube")
         intent.data = Uri.parse(url)
-
         startActivity(intent)
     }
 
+    fun showTeamList(){
+        var intent = Intent(this, TeamsActivity::class.java)
+        startActivity(intent)
+        finish()
+    }
+
+    //Pra abrir players aqui em baixo.
 //    fun openPlayers(details: Teams){
 //        var intent = Intent(this, PlayersActivity::class.java)
 //        intent.putExtra("team", details)

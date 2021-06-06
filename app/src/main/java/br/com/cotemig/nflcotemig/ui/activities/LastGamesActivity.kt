@@ -74,10 +74,8 @@ class LastGamesActivity : AppCompatActivity() {
 
     fun openYoutube(url: String){
         var intent = Intent(Intent.ACTION_VIEW)
-
         intent.setPackage("com.google.android.youtube")
         intent.data = Uri.parse(url)
-
         startActivity(intent)
     }
 }

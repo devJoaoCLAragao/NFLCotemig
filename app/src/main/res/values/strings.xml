@@ -17,17 +17,17 @@
     <string name="user_reset_message">Usuário já existe! Deseja redefinir sua senha?</string>
     <string name="yes">Sim</string>
     <string name="no">Não</string>
-    <string name="internet_required">Erro de conexão. Verifique sua internet</string>
+    <string name="internet_required">Erro de conexao. Verifique sua internet</string>
     <string name="user_not_found">Usuário não encontrado. Deseja criar uma nova conta?</string>
     <string name="tabela_campeonato">Tabela Campeonato</string>
     <string name="lista_de_times">Lista de Times</string>
     <string name="title_activity_standings">StandingsActivity</string>
     <string name="highlights_do_jogo">Highlights do Jogo</string>
     <string name="lista_de_jogadores">Lista de Jogadores</string>
-    <string name="capacidade_do_estadio">Capacidade do Estádio:</string>
-    <string name="endereco_do_estadio">Endereço do Estádio:</string>
-    <string name="estadio">Estádio:</string>
-    <string name="tecnico_principal">Técnico Principal:</string>
+    <string name="capacidade_do_estadio">Capacidade do Estadio:</string>
+    <string name="endereco_do_estadio">Endereco do Estadio:</string>
+    <string name="estadio">Estadio:</string>
+    <string name="tecnico_principal">Tecnico Principal:</string>
     <string name="nome_do_time">Nome do Time:</string>
 
 </resources>
