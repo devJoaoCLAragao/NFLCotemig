@@ -29,5 +29,7 @@
     <string name="estadio">Estadio:</string>
     <string name="tecnico_principal">Tecnico Principal:</string>
     <string name="nome_do_time">Nome do Time:</string>
+    <string name="nome_do_jogador">Nome do Jogador:</string>
+    <string name="posi_o">Posicao:</string>
 
 </resources>

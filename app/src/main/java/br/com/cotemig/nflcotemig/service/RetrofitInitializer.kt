@@ -25,13 +25,13 @@ class RetrofitInitializer {
         .addConverterFactory(GsonConverterFactory.create())
         .build()
 
-    private var retrofitPlayers = Retrofit.Builder()
+    private val retrofitPlayer = Retrofit.Builder()
         .baseUrl("https://fly.sportsdata.io/v3/nfl/scores/json/Players/")
         .addConverterFactory(GsonConverterFactory.create())
         .build()
 
-    fun playerService() : PlayerService{
-        return retrofit.create(PlayerService::class.java)
+    fun serviceListaPlayers(): PlayerService {
+        return retrofitPlayer.create(PlayerService::class.java)
     }
 
     fun accountService() : AccountService{

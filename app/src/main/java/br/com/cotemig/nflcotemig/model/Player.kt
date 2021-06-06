@@ -1,13 +1,14 @@
 package br.com.cotemig.nflcotemig.model
 
-import java.io.Serializable
-
-data class Player (
-    var Team : String = "",
-    var Name : String = "",
-    var Age : String = "",
-    var PhotoUrl : String = "",
-    var PositionCategory : String = "",
-    var Position : String = ""
-
-) : Serializable
+class Player {
+    var Position: String = ""
+    var Status: String = ""
+    var Height: String = ""
+    var Weight: Int = 0
+    var College: String = ""
+    var PositionCategory: String = ""
+    var Name: String = ""
+    var Age: Int = 0
+    var BirthDateString: String = ""
+    var PhotoUrl: String = ""
+}

@@ -32,7 +32,7 @@ class DescTeamsActivity : AppCompatActivity() {
         }
 
         buttonPlayer.setOnClickListener {
-            showPlayers(team.strTeamShort)
+            showPlayers(team)
         }
     }
 
@@ -57,11 +57,10 @@ class DescTeamsActivity : AppCompatActivity() {
     fun showTeamList(){
         var intent = Intent(this, TeamsActivity::class.java)
         startActivity(intent)
-        finish()
     }
 
     //Pra abrir players aqui em baixo.
-    fun showPlayers(details: String){
+    fun showPlayers(details: Teams){
         var intent = Intent(this, PlayersActivity::class.java)
         intent.putExtra("team", details)
         startActivity(intent)
