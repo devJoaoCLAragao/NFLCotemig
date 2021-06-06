@@ -15,11 +15,31 @@ class MainMenuActivity : AppCompatActivity() {
         tableStanding.setOnClickListener {
             showStandings()
         }
+
+        table15.setOnClickListener {
+            showLastGames()
+        }
+
+        tableTeam.setOnClickListener {
+            showTeams()
+        }
+
     }
 
     fun showStandings(){
         var intent = Intent(this, StandingsActivity::class.java)
         startActivity(intent)
+    }
+
+    fun showLastGames(){
+        var intent = Intent(this, LastGamesActivity::class.java)
+        startActivity(intent)
+    }
+
+    fun showTeams(){
+        var intent = Intent(this, TeamsActivity::class.java)
+        startActivity(intent)
+
     }
 
 }

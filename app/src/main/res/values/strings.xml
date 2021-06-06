@@ -22,5 +22,12 @@
     <string name="tabela_campeonato">Tabela Campeonato</string>
     <string name="lista_de_times">Lista de Times</string>
     <string name="title_activity_standings">StandingsActivity</string>
+    <string name="highlights_do_jogo">Highlights do Jogo</string>
+    <string name="lista_de_jogadores">Lista de Jogadores</string>
+    <string name="capacidade_do_estadio">Capacidade do Estádio:</string>
+    <string name="endereco_do_estadio">Endereço do Estádio:</string>
+    <string name="estadio">Estádio:</string>
+    <string name="tecnico_principal">Técnico Principal:</string>
+    <string name="nome_do_time">Nome do Time:</string>
 
 </resources>
