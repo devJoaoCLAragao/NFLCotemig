@@ -48,9 +48,9 @@ class LastGamesAdapter(var context: Context, var listlg: List<LastGames>) : Recy
         }
 
         fun openYoutubeLink(context: Context, youtubeID: String) {
-            val intentApp = Intent(Intent.ACTION_VIEW, Uri.parse("vnd.youtube:" + youtubeID))
+            val intentApp = Intent(Intent.ACTION_VIEW, Uri.parse(youtubeID))
             val intentBrowser =
-                Intent(Intent.ACTION_VIEW, Uri.parse("http://www.youtube.com/watch?v=" + youtubeID))
+                Intent(Intent.ACTION_VIEW, Uri.parse(youtubeID))
             try {
                 context.startActivity(intentApp)
             } catch (ex: ActivityNotFoundException) {
