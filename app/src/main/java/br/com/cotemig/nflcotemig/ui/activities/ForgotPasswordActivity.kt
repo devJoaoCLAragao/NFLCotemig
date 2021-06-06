@@ -17,12 +17,7 @@ class ForgotPasswordActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_forgot_password)
 
-        //TODO
-        // "Tem que fazer isso funcionar"
-        // Só ta "funcionando" o que vem da CreateAccountActivity
-        // testei pelo Postman e a API não retorna nada..
-
-        // esse e-mail vem da Create Account, se conta já existe...
+        // esse e-mail vem da Create Account
         var email = Intent().getStringExtra("email")
         forgot_email.setText(email)
 
@@ -35,21 +30,16 @@ class ForgotPasswordActivity : AppCompatActivity() {
         var account = Account()
         account.email = forgot_email.text.toString()
         var s = RetrofitInitializer().accountService()
-        var call = s.create(account)
+        var call = s.forgot(account)
 
-        call.enqueue(object : Callback<Account>{
-
-            override fun onResponse(call: Call<Account>, response: Response<Account>) {
-                if (response.code() == 200){
-                    Toast.makeText(this@ForgotPasswordActivity, "Deu bom", Toast.LENGTH_LONG).show()
-                }
-
-            }
-            override fun onFailure(call: Call<Account>, t: Throwable) {
-                Toast.makeText(this@ForgotPasswordActivity, "Deu ruim", Toast.LENGTH_LONG).show()
+        call.enqueue(object : Callback<Void>{
+            override fun onFailure(call: Call<Void>, t: Throwable) {
+                Toast.makeText(this@ForgotPasswordActivity, "DEU RUIM CORRE", Toast.LENGTH_LONG).show()
             }
 
-
+            override fun onResponse(call: Call<Void>, response: Response<Void>) {
+                Toast.makeText(this@ForgotPasswordActivity, "Email enviado", Toast.LENGTH_LONG).show()
+            }
         } )
     }
 

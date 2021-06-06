@@ -33,7 +33,7 @@ class DescTeamsActivity : AppCompatActivity() {
         }
 
         strFacebook.setOnClickListener {
-            newFacebookIntent("arizonacardinals")
+            newFacebookIntent("www.facebook.com/arizonacardinals")
         }
     }
 

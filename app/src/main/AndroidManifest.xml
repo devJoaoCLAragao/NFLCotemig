@@ -15,18 +15,18 @@
         <activity android:name=".ui.activities.DescTeamsActivity" />
         <activity android:name=".ui.activities.TeamsActivity" />
         <activity android:name=".ui.activities.LastGamesActivity" />
-        <activity android:name=".ui.activities.MainMenuActivity">
+        <activity android:name=".ui.activities.MainMenuActivity"/>
+        <activity android:name=".ui.activities.StandingsActivity" />
+        <activity android:name=".ui.activities.CreateAccountActivity" />
+        <activity android:name=".ui.activities.ForgotPasswordActivity" />
+        <activity android:name=".ui.activities.LoginActivity" />
+        <activity android:name=".ui.activities.SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.activities.StandingsActivity" />
-        <activity android:name=".ui.activities.CreateAccountActivity" />
-        <activity android:name=".ui.activities.ForgotPasswordActivity" />
-        <activity android:name=".ui.activities.LoginActivity" />
-        <activity android:name=".ui.activities.SplashScreenActivity" />
     </application>
 
 </manifest>
