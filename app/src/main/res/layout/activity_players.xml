@@ -7,13 +7,6 @@
     tools:context=".ui.activities.PlayersActivity"
     android:background="@color/blue_NFL">
 
-    <ImageButton
-        android:id="@+id/backDescTeams"
-        android:layout_width="40dp"
-        android:layout_height="30dp"
-        android:layout_margin="20dp"
-        android:background="@drawable/arrow_back" />
-
     <TextView
         android:id="@+id/jogadores"
         android:layout_width="match_parent"

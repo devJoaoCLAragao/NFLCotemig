@@ -27,14 +27,17 @@ class PlayersAdapter(var context: Context, var list: List<Player>) :
 
     class PlayerHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(context: Context, players: Player) {
+            var inches = ((players.HeightFeet*12) + players.HeightInches)
+            var meter = inches/39.37008
+            var peso = players.Weight * 0.453592
 
             Glide.with(context).load(players.PhotoUrl).into(itemView.photoUrl)
 
             itemView.name.text = players.Name
             itemView.position.text = players.Position
             itemView.college.text = players.College
-            itemView.heightP.text = players.Height
-            itemView.weightP.text = players.Weight.toString()
+            itemView.heightP.text = String.format("%.2f m", meter.toString().toDouble())
+            itemView.weightP.text = String.format("%.0f kg", peso.toString().toDouble())
         }
     }
 }

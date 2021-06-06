@@ -20,20 +20,6 @@ class PlayersActivity : AppCompatActivity() {
         setContentView(R.layout.activity_players)
 
         getPlayer()
-
-        //botão voltar
-        backDescTeams.setOnClickListener {
-            showTeamDesc()
-        }
-
-
-    }
-
-    //botão voltar
-    fun showTeamDesc() {
-        var intent = Intent(this, DescTeamsActivity::class.java)
-        startActivity(intent)
-        finish()
     }
 
     fun getPlayer() {

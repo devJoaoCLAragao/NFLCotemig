@@ -27,10 +27,6 @@ class DescTeamsActivity : AppCompatActivity() {
             openYoutube(team.strYoutube)
         }
 
-        backTeamList.setOnClickListener {
-            showTeamList()
-        }
-
         buttonPlayer.setOnClickListener {
             showPlayers(team)
         }
@@ -54,10 +50,6 @@ class DescTeamsActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-    fun showTeamList(){
-        var intent = Intent(this, TeamsActivity::class.java)
-        startActivity(intent)
-    }
 
     //Pra abrir players aqui em baixo.
     fun showPlayers(details: Teams){

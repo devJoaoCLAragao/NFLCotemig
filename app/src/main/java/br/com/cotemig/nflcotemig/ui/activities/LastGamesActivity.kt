@@ -22,20 +22,11 @@ class LastGamesActivity : AppCompatActivity() {
 
         getLastGames()
 
-        backMainMenu2.setOnClickListener {
-            backMenu()
-        }
-
-        youtubetest.setOnClickListener {
-            openYoutube("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
-        }
-
     }
 
     fun getLastGames() {
 
         var s = RetrofitInitializer().serviceLastGames()
-
         var call = s.getLastGames()
 
         call.enqueue(object : retrofit2.Callback<ListaLastGames> {
@@ -64,18 +55,5 @@ class LastGamesActivity : AppCompatActivity() {
     fun showLastGames(list: List<LastGames>) {
         gamesList.adapter = LastGamesAdapter(this, list)
         gamesList.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
-    }
-
-    fun backMenu() {
-        var intent = Intent(this, MainMenuActivity::class.java)
-        startActivity(intent)
-        finish()
-    }
-
-    fun openYoutube(url: String){
-        var intent = Intent(Intent.ACTION_VIEW)
-        intent.setPackage("com.google.android.youtube")
-        intent.data = Uri.parse(url)
-        startActivity(intent)
     }
 }

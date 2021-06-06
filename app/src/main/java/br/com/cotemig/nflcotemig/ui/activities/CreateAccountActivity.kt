@@ -19,10 +19,6 @@ class CreateAccountActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_create_account)
 
-        back_login.setOnClickListener {
-            showLogin()
-        }
-
         btnCreateAccount.setOnClickListener {
             createAccount()
         }

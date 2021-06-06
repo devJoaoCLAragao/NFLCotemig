@@ -10,6 +10,7 @@ import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import br.com.cotemig.nflcotemig.R
 import br.com.cotemig.nflcotemig.model.LastGames
+import br.com.cotemig.nflcotemig.model.Teams
 import br.com.cotemig.nflcotemig.ui.activities.LastGamesActivity
 import kotlinx.android.synthetic.main.item_lastgames.view.*
 

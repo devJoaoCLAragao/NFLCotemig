@@ -20,10 +20,6 @@ class StandingsActivity : AppCompatActivity() {
 
         getStanding()
 
-        backMainMenu.setOnClickListener {
-            backMenu()
-        }
-
     }
 
     fun getStanding() {
@@ -52,12 +48,6 @@ class StandingsActivity : AppCompatActivity() {
             }
         })
 
-    }
-
-    fun backMenu(){
-        var intent = Intent(this, MainMenuActivity::class.java)
-        startActivity(intent)
-        finish()
     }
 
 }

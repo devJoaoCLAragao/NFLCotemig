@@ -11,4 +11,6 @@ class Player {
     var Age: Int = 0
     var BirthDateString: String = ""
     var PhotoUrl: String = ""
+    var HeightFeet : Int = 0
+    var HeightInches : Int = 0
 }

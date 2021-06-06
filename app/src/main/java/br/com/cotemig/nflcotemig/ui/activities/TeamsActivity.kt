@@ -21,10 +21,6 @@ class TeamsActivity : AppCompatActivity() {
 
         getTeam()
 
-        backMainMenu3.setOnClickListener {
-            showMenu()
-        }
-
     }
 
     fun getTeam(){
@@ -57,11 +53,5 @@ class TeamsActivity : AppCompatActivity() {
 
         teamsdesc.adapter = TeamsAdapter(this, teams)
         teamsdesc.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
-    }
-
-    fun showMenu(){
-        var intent = Intent(this, MainMenuActivity::class.java)
-        startActivity(intent)
-        finish()
     }
 }

@@ -20,15 +20,7 @@ class ForgotPasswordActivity : AppCompatActivity() {
         var email = Intent().getStringExtra("email")
         forgot_email.setText(email)
 
-        back_login.setOnClickListener {
-            showLogin()
-        }
 
     }
 
-    fun showLogin() {
-        var intent = Intent(this, LoginActivity::class.java)
-        startActivity(intent)
-        finish()
-    }
 }
