@@ -11,8 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NFLCotemig">
-        <activity android:name=".ui.activities.PlayersActivity"></activity>
-        <activity android:name=".PlayerActivity" />
+        <activity android:name=".ui.activities.PlayersActivity"/>
         <activity android:name=".ui.activities.DescTeamsActivity" />
         <activity android:name=".ui.activities.TeamsActivity" />
         <activity android:name=".ui.activities.LastGamesActivity" />

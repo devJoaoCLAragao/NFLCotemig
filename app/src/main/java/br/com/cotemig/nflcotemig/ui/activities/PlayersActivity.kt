@@ -11,12 +11,16 @@ class PlayersActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_players)
 
+        //botão voltar
         backDescTeams.setOnClickListener {
             showTeamDesc()
         }
 
+
+
     }
 
+    //botão voltar
     fun showTeamDesc(){
         var intent = Intent(this, DescTeamsActivity::class.java)
         startActivity(intent)

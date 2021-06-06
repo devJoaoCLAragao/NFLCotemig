@@ -30,6 +30,10 @@ class DescTeamsActivity : AppCompatActivity() {
         backTeamList.setOnClickListener {
             showTeamList()
         }
+
+        buttonPlayer.setOnClickListener {
+            showPlayers(team.strTeamShort)
+        }
     }
 
 
@@ -57,9 +61,9 @@ class DescTeamsActivity : AppCompatActivity() {
     }
 
     //Pra abrir players aqui em baixo.
-//    fun openPlayers(details: Teams){
-//        var intent = Intent(this, PlayersActivity::class.java)
-//        intent.putExtra("team", details)
-//        startActivity(intent)
-//    }
+    fun showPlayers(details: String){
+        var intent = Intent(this, PlayersActivity::class.java)
+        intent.putExtra("team", details)
+        startActivity(intent)
+    }
 }

@@ -26,7 +26,7 @@ class RetrofitInitializer {
         .build()
 
     private var retrofitPlayers = Retrofit.Builder()
-        .baseUrl("https://fly.sportsdata.io/v3/nfl/scores/json/Players")
+        .baseUrl("https://fly.sportsdata.io/v3/nfl/scores/json/Players/")
         .addConverterFactory(GsonConverterFactory.create())
         .build()
 
@@ -49,9 +49,4 @@ class RetrofitInitializer {
     fun serviceListaTeam(): TeamService {
         return retrofitTeams.create(TeamService::class.java)
     }
-
-    fun serviceListaDescTeam(): DescTeamService {
-        return retrofitTeams.create(DescTeamService::class.java)
-    }
-
 }
