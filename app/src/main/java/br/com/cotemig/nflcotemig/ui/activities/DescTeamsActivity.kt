@@ -3,6 +3,7 @@ package br.com.cotemig.nflcotemig.ui.activities
 import android.content.ActivityNotFoundException
 import android.content.Context
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -22,15 +23,17 @@ class DescTeamsActivity : AppCompatActivity() {
         setContentView(R.layout.activity_descteams)
 
         var team = intent.getSerializableExtra("team") as Teams
-
         showDescTeams(team)
-
         strYoutube.setOnClickListener {
             openYoutubeLink(team.strYoutube)
         }
 
         buttonPlayer.setOnClickListener {
             showPlayers(team)
+        }
+
+        strFacebook.setOnClickListener {
+            newFacebookIntent("arizonacardinals")
         }
     }
 
@@ -54,6 +57,19 @@ class DescTeamsActivity : AppCompatActivity() {
         } catch (ex: ActivityNotFoundException) {
             startActivity(intentBrowser)
         }
+    }
+
+    fun newFacebookIntent(url: String) {
+        var uri = Uri.parse(url)
+        try {
+            val applicationInfo = packageManager.getApplicationInfo("com.facebook.katana", 0)
+            if (applicationInfo.enabled) {
+                uri = Uri.parse("fb://facewebmodal/f?href=$url")
+            }
+        } catch (ignored: PackageManager.NameNotFoundException) {
+        }
+        var intent = Intent(Intent.ACTION_VIEW, uri)
+        startActivity(intent)
     }
 
 
