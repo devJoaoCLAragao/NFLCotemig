@@ -33,7 +33,10 @@ class DescTeamsActivity : AppCompatActivity() {
         }
 
         strFacebook.setOnClickListener {
-            startActivity(getOpenFacebookIntent(team.strFacebook))
+            val facebookIntent = Intent(Intent.ACTION_VIEW)
+            val facebookUrl = getFacebookPageURL(this, team.strFacebook)
+            facebookIntent.data = Uri.parse(facebookUrl)
+            startActivity(facebookIntent)
         }
     }
 
@@ -59,12 +62,21 @@ class DescTeamsActivity : AppCompatActivity() {
         }
     }
 
-    private fun getOpenFacebookIntent(url: String): Intent? {
+    fun getFacebookPageURL(context: Context, url: String): String? {
+
+        var FACEBOOK_URL = "https://$url"
+        var FACEBOOK_PAGE_ID = "YourPageName"
+
+        val packageManager = context.packageManager
         return try {
-            packageManager.getPackageInfo("com.facebook.katana", 0)
-            Intent(Intent.ACTION_VIEW, Uri.parse("http://$url"))
-        } catch (e: Exception) {
-            Intent(Intent.ACTION_VIEW, Uri.parse("http://$url"))
+            val versionCode = packageManager.getPackageInfo("com.facebook.katana", 0).versionCode
+            if (versionCode >= 3002850) { //newer versions of fb app
+                "fb://facewebmodal/f?href=$FACEBOOK_URL"
+            } else { //older versions of fb app
+                "fb://page/$FACEBOOK_PAGE_ID"
+            }
+        } catch (e: PackageManager.NameNotFoundException) {
+            FACEBOOK_URL //normal web url
         }
     }
 
