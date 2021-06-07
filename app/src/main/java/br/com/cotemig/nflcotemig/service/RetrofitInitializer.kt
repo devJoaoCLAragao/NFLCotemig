@@ -11,7 +11,7 @@ class RetrofitInitializer {
     build()
 
     private val retrofitStandings = Retrofit.Builder()
-        .baseUrl("https://api.sportsdata.io/v3/nfl/scores/json/Standings/")
+        .baseUrl("https://fly.sportsdata.io/v3/nfl/scores/json/Standings/")
         .addConverterFactory(GsonConverterFactory.create())
         .build()
 
