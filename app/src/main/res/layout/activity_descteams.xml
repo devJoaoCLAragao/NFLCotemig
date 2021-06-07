@@ -176,16 +176,36 @@
         <ImageButton
             android:id="@+id/strFacebook"
             android:layout_width="70dp"
+            android:layout_weight="1"
             android:layout_height="70dp"
             android:background="@color/transparent"
-            android:src="@drawable/facebook" />
+            android:src="@drawable/facebook_icon" />
 
         <ImageButton
             android:id="@+id/strYoutube"
             android:layout_width="70dp"
             android:layout_height="70dp"
+            android:layout_weight="1"
             android:background="@color/transparent"
-            android:src="@drawable/youtube_button" />
+            android:src="@drawable/youtube_icon" />
+
+        <ImageButton
+            android:id="@+id/strTwitter"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:src="@drawable/twitter_icon" />
+
+        <ImageButton
+            android:id="@+id/strInstagram"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:src="@drawable/instagram_icon" />
+
+
 
     </LinearLayout>
 
