@@ -11,7 +11,7 @@ class RetrofitInitializer {
     build()
 
     private val retrofitStandings = Retrofit.Builder()
-        .baseUrl("https://api.sportsdata.io/v3/nfl/scores/json/Standings/")
+        .baseUrl("https://fly.sportsdata.io/v3/nfl/scores/json/Standings/")
         .addConverterFactory(GsonConverterFactory.create())
         .build()
 
@@ -24,6 +24,15 @@ class RetrofitInitializer {
         .baseUrl("https://www.thesportsdb.com/api/v1/json/1/")
         .addConverterFactory(GsonConverterFactory.create())
         .build()
+
+    private val retrofitPlayer = Retrofit.Builder()
+        .baseUrl("https://fly.sportsdata.io/v3/nfl/scores/json/Players/")
+        .addConverterFactory(GsonConverterFactory.create())
+        .build()
+
+    fun serviceListaPlayers(): PlayerService {
+        return retrofitPlayer.create(PlayerService::class.java)
+    }
 
     fun accountService() : AccountService{
         return retrofit.create(AccountService::class.java)
@@ -40,9 +49,4 @@ class RetrofitInitializer {
     fun serviceListaTeam(): TeamService {
         return retrofitTeams.create(TeamService::class.java)
     }
-
-    fun serviceListaDescTeam(): DescTeamService {
-        return retrofitTeams.create(DescTeamService::class.java)
-    }
-
 }

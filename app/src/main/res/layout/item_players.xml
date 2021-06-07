@@ -1,27 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/blue_NFL"
-    tools:context=".ui.activities.DescTeamsActivity">
+    android:layout_height="wrap_content"
+    android:background="@color/blue_NFL">
 
     <ImageView
-        android:id="@+id/strTeamBadge"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_centerHorizontal="true"
-        android:layout_margin="10dp"
-        android:background="@color/transparent"
-        android:scaleType="centerCrop" />
+        android:id="@+id/photoUrl"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="10dp" />
 
     <LinearLayout
-        android:id="@+id/box1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/strTeamBadge"
         android:layout_margin="10dp"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/photoUrl"
         android:orientation="vertical">
 
         <LinearLayout
@@ -33,18 +27,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/font_nfl"
-                android:text="@string/nome_do_time"
+                android:text="@string/nome_do_jogador"
                 android:textColor="@color/red_NFL"
                 android:textSize="12sp" />
 
             <TextView
-                android:id="@+id/strTeam"
+                android:id="@+id/name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:fontFamily="@font/font_nfl"
+                android:text="Kyle Fuller"
                 android:textColor="@color/white"
-                android:textSize="16sp" />
+                android:textSize="12sp" />
 
         </LinearLayout>
 
@@ -58,19 +53,20 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:fontFamily="@font/font_nfl"
-                android:text="@string/tecnico_principal"
+                android:text="@string/posi_o"
                 android:textColor="@color/red_NFL"
                 android:textSize="12sp" />
 
             <TextView
-                android:id="@+id/strManager"
+                android:id="@+id/position"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="5dp"
                 android:fontFamily="@font/font_nfl"
+                android:text="CB"
                 android:textColor="@color/white"
-                android:textSize="16sp" />
+                android:textSize="12sp" />
 
         </LinearLayout>
 
@@ -84,19 +80,20 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:fontFamily="@font/font_nfl"
-                android:text="@string/estadio"
+                android:text="Faculdade: "
                 android:textColor="@color/red_NFL"
                 android:textSize="12sp" />
 
             <TextView
-                android:id="@+id/strStadium"
+                android:id="@+id/college"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="5dp"
                 android:fontFamily="@font/font_nfl"
+                android:text="Virginia Tech"
                 android:textColor="@color/white"
-                android:textSize="16sp" />
+                android:textSize="12sp" />
 
         </LinearLayout>
 
@@ -110,19 +107,20 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:fontFamily="@font/font_nfl"
-                android:text="@string/endereco_do_estadio"
+                android:text="Altura: "
                 android:textColor="@color/red_NFL"
                 android:textSize="12sp" />
 
             <TextView
-                android:id="@+id/strStadiumLocation"
+                android:id="@+id/heightP"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="5dp"
                 android:fontFamily="@font/font_nfl"
+                android:text="5'11''"
                 android:textColor="@color/white"
-                android:textSize="16sp" />
+                android:textSize="12sp" />
 
         </LinearLayout>
 
@@ -136,89 +134,23 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:fontFamily="@font/font_nfl"
-                android:text="@string/capacidade_do_estadio"
+                android:text="Peso: "
                 android:textColor="@color/red_NFL"
                 android:textSize="12sp" />
 
             <TextView
-                android:id="@+id/intStadiumCapacity"
+                android:id="@+id/weightP"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="5dp"
                 android:fontFamily="@font/font_nfl"
+                android:text="194"
                 android:textColor="@color/white"
-                android:textSize="16sp" />
+                android:textSize="12sp" />
 
         </LinearLayout>
 
     </LinearLayout>
-
-    <ImageView
-        android:id="@+id/strStadiumThumb"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_below="@id/box1"
-        android:layout_centerHorizontal="true"
-        android:layout_margin="10dp"
-        android:background="@color/transparent"
-        android:scaleType="centerCrop" />
-
-    <LinearLayout
-        android:id="@+id/box2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/strStadiumThumb"
-        android:layout_marginHorizontal="10dp"
-        android:gravity="center"
-        android:orientation="horizontal">
-
-        <ImageButton
-            android:id="@+id/strFacebook"
-            android:layout_width="70dp"
-            android:layout_weight="1"
-            android:layout_height="70dp"
-            android:background="@color/transparent"
-            android:src="@drawable/facebook_icon" />
-
-        <ImageButton
-            android:id="@+id/strYoutube"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:layout_weight="1"
-            android:background="@color/transparent"
-            android:src="@drawable/youtube_icon" />
-
-        <ImageButton
-            android:id="@+id/strTwitter"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:layout_weight="1"
-            android:background="@color/transparent"
-            android:src="@drawable/twitter_icon" />
-
-        <ImageButton
-            android:id="@+id/strInstagram"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:layout_weight="1"
-            android:background="@color/transparent"
-            android:src="@drawable/instagram_icon" />
-
-
-
-    </LinearLayout>
-
-    <Button
-        android:id="@+id/buttonPlayer"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/box2"
-        android:layout_marginHorizontal="30dp"
-        android:layout_marginVertical="10dp"
-        android:background="@drawable/background_button_login"
-        android:text="@string/lista_de_jogadores"
-        android:textColor="@color/white" />
-
 
 </RelativeLayout>

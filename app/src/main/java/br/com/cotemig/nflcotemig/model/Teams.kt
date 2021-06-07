@@ -14,5 +14,7 @@ data class Teams(
     var strTeamBadge: String = "",
     var strTeamBanner: String = "",
     var strFacebook: String = "",
+    var strTwitter: String = "",
+    var strInstagram: String = "",
     var strYoutube: String = ""
 ):Serializable

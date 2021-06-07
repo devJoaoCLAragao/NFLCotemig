@@ -1,5 +1,6 @@
 package br.com.cotemig.nflcotemig.ui.adapters
 
+import android.content.ActivityNotFoundException
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
@@ -10,6 +11,7 @@ import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import br.com.cotemig.nflcotemig.R
 import br.com.cotemig.nflcotemig.model.LastGames
+import br.com.cotemig.nflcotemig.model.Teams
 import br.com.cotemig.nflcotemig.ui.activities.LastGamesActivity
 import kotlinx.android.synthetic.main.item_lastgames.view.*
 
@@ -21,7 +23,7 @@ class LastGamesAdapter(var context: Context, var listlg: List<LastGames>) : Recy
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        (holder as LastGamesHolder).bind(listlg[position])
+        (holder as LastGamesHolder).bind(context, listlg[position])
     }
 
     override fun getItemCount(): Int {
@@ -30,7 +32,7 @@ class LastGamesAdapter(var context: Context, var listlg: List<LastGames>) : Recy
 
     class LastGamesHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
 
-        fun bind(lastGames: LastGames){
+        fun bind(context: Context, lastGames: LastGames){
             itemView.event.text = lastGames.strEvent
             itemView.dateEvent.text = lastGames.dateEvent
             itemView.timeEvent.text = lastGames.strTime
@@ -39,15 +41,21 @@ class LastGamesAdapter(var context: Context, var listlg: List<LastGames>) : Recy
             itemView.homeScore.text = lastGames.intHomeScore
             itemView.awayScore.text = lastGames.intAwayScore
 
-//            itemView.video.setOnClickListener {
-//                var intent = Intent(Intent.ACTION_VIEW)
-//
-//                intent.setPackage("com.google.android.youtube")
-//                intent.data = Uri.parse(lastGames.strVideo)
-//
-//                startActivity(intent)
-//            }
+            itemView.video.setOnClickListener {
+                openYoutubeLink(context, lastGames.strVideo)
+            }
 
+        }
+
+        fun openYoutubeLink(context: Context, youtubeID: String) {
+            val intentApp = Intent(Intent.ACTION_VIEW, Uri.parse(youtubeID))
+            val intentBrowser =
+                Intent(Intent.ACTION_VIEW, Uri.parse(youtubeID))
+            try {
+                context.startActivity(intentApp)
+            } catch (ex: ActivityNotFoundException) {
+                context.startActivity(intentBrowser)
+            }
         }
     }
 }

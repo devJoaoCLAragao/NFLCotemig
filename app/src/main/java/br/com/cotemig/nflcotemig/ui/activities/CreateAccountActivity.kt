@@ -19,10 +19,6 @@ class CreateAccountActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_create_account)
 
-        back_login.setOnClickListener {
-            showLogin()
-        }
-
         btnCreateAccount.setOnClickListener {
             createAccount()
         }
@@ -46,10 +42,8 @@ class CreateAccountActivity : AppCompatActivity() {
         account.name = create_name.text.toString()
         account.email = create_email.text.toString()
         account.password = create_password.text.toString()
-
         var s = RetrofitInitializer().accountService()
         var call = s.create(account)
-
         call.enqueue(object : Callback<Account>{
 
             override fun onResponse(call: Call<Account>, response: Response<Account>) {
